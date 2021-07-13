@@ -15,6 +15,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config-service" target="1.8" />
       <module name="consumer-service" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="diag-service1" target="1.8" />
@@ -28,6 +29,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-service" options="-parameters" />
       <module name="consumer-service" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="diag-service1" options="-parameters" />

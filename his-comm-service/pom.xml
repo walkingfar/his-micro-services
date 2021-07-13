@@ -24,5 +24,8 @@
     </dependencies>
     <modules>
         <module>regist-service</module>
+        <module>diag-service1</module>
+        <module>diag-service2</module>
+        <module>consumer-service</module>
     </modules>
 </project>
