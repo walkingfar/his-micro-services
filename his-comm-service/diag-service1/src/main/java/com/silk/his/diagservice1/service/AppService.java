@@ -1,8 +1,11 @@
 package com.silk.his.diagservice1.service;
 
+import com.silk.his.diagservice1.config.ConfigEntity;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author qianyf
@@ -11,10 +14,13 @@ import org.springframework.stereotype.Service;
 @Service
 @RefreshScope
 public class AppService {
-    @Value("${test}")
-    private String testVlaue;
+    @Resource
+    private ConfigEntity configEntity;
 
-    public String getDiag(){
-        return testVlaue;
+    @Value("${test.value}")
+    private String value;
+
+    public String getDiag() {
+        return "ConfigurationProperties:" + configEntity.getValue() + "-------Value:" + value;//configEntity.getValue();
     }
 }

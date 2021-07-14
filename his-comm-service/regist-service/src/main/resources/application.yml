@@ -13,11 +13,11 @@ eureka:
     enableSelfPreservation: false
     eviction-interval-timer-in-ms: 4000
 
-management:
-  endpoint:
-    shutdown:
-      enabled: false
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#management:
+#  endpoint:
+#    shutdown:
+#      enabled: false
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
