@@ -21,6 +21,7 @@
 <!--        <springcloud.version>2020.0.3</springcloud.version>-->
         <springcloud.version>Hoxton.SR3</springcloud.version>
         <feign.version>1.4.7.RELEASE</feign.version>
+        <swagger.version>2.6.1</swagger.version>
     </properties>
 
     <dependencies>
@@ -38,6 +39,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- Swagger核心包 start -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!-- Swagger核心包 end -->
         </dependencies>
     </dependencyManagement>
 

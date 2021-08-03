@@ -7,9 +7,11 @@ import org.springframework.stereotype.Component;
  * @date 2021-07-09
  */
 @Component
-public class FeignHystrixImpl implements FeignConfig{
+public class FeignHystrixImpl implements FeignConfig {
+    private final static String fallBackInfo = "Hystrix fallback";
+
     @Override
-    public String getDiag(){
-        return "Hystrix fallback";
+    public String getDiag() {
+        return fallBackInfo;
     }
 }
