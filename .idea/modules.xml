@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/his-comm-service/consumer-service/consumer-service.iml" filepath="$PROJECT_DIR$/his-comm-service/consumer-service/consumer-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/his-comm-service/diag-service1/diag-service1.iml" filepath="$PROJECT_DIR$/his-comm-service/diag-service1/diag-service1.iml" />
       <module fileurl="file://$PROJECT_DIR$/his-comm-service/diag-service2/diag-service2.iml" filepath="$PROJECT_DIR$/his-comm-service/diag-service2/diag-service2.iml" />
