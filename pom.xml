@@ -66,5 +66,6 @@
 
     <modules>
         <module>his-comm-service</module>
+        <module>common</module>
     </modules>
 </project>

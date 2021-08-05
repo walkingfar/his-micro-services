@@ -1,6 +1,7 @@
 package com.silk.demo.consumerservice.controller;
 
 import com.silk.demo.consumerservice.config.FeignConfig;
+import com.silk.his.annotation.AopAnnotation;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,7 @@ public class AppController {
      */
     @GetMapping("/get/diag")
     @ApiOperation("返回远程数据仓库配置")
+    @AopAnnotation
     public String getDiag() throws Exception {
         //return restTemplate.getForObject(URL + "v1/diag", String.class);
         long start = System.currentTimeMillis();
