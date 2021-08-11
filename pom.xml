@@ -21,6 +21,7 @@
 <!--        <springcloud.version>2020.0.3</springcloud.version>-->
         <springcloud.version>Hoxton.SR3</springcloud.version>
         <feign.version>1.4.7.RELEASE</feign.version>
+        <rocketmq.version>2.2.0</rocketmq.version>
     </properties>
 
     <dependencies>
@@ -37,6 +38,12 @@
                 <version>${springcloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
