@@ -1,8 +1,10 @@
 package com.silk.demo.consumerservice.controller;
 
 import com.silk.demo.consumerservice.config.FeignConfig;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.silk.his.annotation.AopAnnotation;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
@@ -12,6 +14,8 @@ import javax.annotation.Resource;
  * @date 2021-07-08
  */
 @RestController
+@RequestMapping("service")
+@Api(value = "euraka-consumer",description = "euraka-consumer-service")
 public class AppController {
     private final static String URL = "http://PROVIDER/";
     @Resource
@@ -19,7 +23,14 @@ public class AppController {
     @Resource
     private FeignConfig feignConfig;
 
-    @GetMapping("get/diag")
+    /**
+     * 返回远程数据仓库配置
+     * @return
+     * @throws Exception
+     */
+    @GetMapping("/get/diag")
+    @ApiOperation("返回远程数据仓库配置")
+    @AopAnnotation
     public String getDiag() throws Exception {
         //return restTemplate.getForObject(URL + "v1/diag", String.class);
         long start = System.currentTimeMillis();
@@ -28,7 +39,7 @@ public class AppController {
         return result + ">>>>>>>" + (end - start);
     }
 
-    @GetMapping("test")
+    @GetMapping("/test")
     public String test() {
         return "test";
     }

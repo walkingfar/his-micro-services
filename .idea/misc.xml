@@ -13,6 +13,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/his-comm-service/common/pom.xml" />
         <option value="$PROJECT_DIR$/his-common/pom.xml" />
       </set>
     </option>
