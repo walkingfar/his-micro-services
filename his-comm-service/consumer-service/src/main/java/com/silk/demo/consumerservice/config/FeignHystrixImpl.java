@@ -14,4 +14,14 @@ public class FeignHystrixImpl implements FeignConfig {
     public String getDiag() {
         return fallBackInfo;
     }
+
+    @Override
+    public String testRocketmq() {
+        return fallBackInfo;
+    }
+
+    @Override
+    public String test() {
+        return fallBackInfo + ":test";
+    }
 }

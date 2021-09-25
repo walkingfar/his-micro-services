@@ -2,8 +2,8 @@ package com.silk.demo.consumerservice.controller;
 
 import com.silk.demo.consumerservice.config.FeignConfig;
 import com.silk.his.annotation.AopAnnotation;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+//import io.swagger.annotations.Api;
+//import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("service")
-@Api(value = "euraka-consumer",description = "euraka-consumer-service")
+//@Api(value = "euraka-consumer",description = "euraka-consumer-service")
 public class AppController {
     private final static String URL = "http://PROVIDER/";
     @Resource
@@ -25,11 +25,12 @@ public class AppController {
 
     /**
      * 返回远程数据仓库配置
+     *
      * @return
      * @throws Exception
      */
     @GetMapping("/get/diag")
-    @ApiOperation("返回远程数据仓库配置")
+    //@ApiOperation("返回远程数据仓库配置")
     @AopAnnotation
     public String getDiag() throws Exception {
         //return restTemplate.getForObject(URL + "v1/diag", String.class);
@@ -39,8 +40,13 @@ public class AppController {
         return result + ">>>>>>>" + (end - start);
     }
 
-    @GetMapping("/test")
+    @GetMapping("get/rocket")
+    public String testRocket() {
+        return feignConfig.testRocketmq();
+    }
+
+    @PostMapping("get/test")
     public String test() {
-        return "test";
+        return feignConfig.test();
     }
 }

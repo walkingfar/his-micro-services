@@ -22,6 +22,10 @@
         <springcloud.version>Hoxton.SR3</springcloud.version>
         <feign.version>1.4.7.RELEASE</feign.version>
         <rocketmq.version>2.2.0</rocketmq.version>
+        <swagger.version>2.5.0</swagger.version>
+        <swaggerui.version>2.5.0</swaggerui.version>
+        <jedis.version>3.3.0</jedis.version>
+<!--        <jackson.version>1.9.13</jackson.version>-->
     </properties>
 
     <dependencies>
@@ -45,6 +49,18 @@
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
                 <version>${rocketmq.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>org.codehaus.jackson</groupId>-->
+<!--                <artifactId>jackson-core-asl</artifactId>-->
+<!--                <version>${jackon.version}</version>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -59,5 +75,6 @@
 
     <modules>
         <module>his-comm-service</module>
+        <module>common</module>
     </modules>
 </project>
